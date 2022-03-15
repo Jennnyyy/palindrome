@@ -16,6 +16,15 @@ public class PalindromeChecker {
      * @return true if the string is a palindrome, false otherwise
      */
     public static boolean isPalindrome(String s) {
-        return false;
+
+        String sb = new StringBuilder(s).toString();
+
+        String rev = sb.toString();
+
+        if (s.equals(rev)) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
