@@ -16,15 +16,10 @@ public class PalindromeChecker {
      * @return true if the string is a palindrome, false otherwise
      */
     public static boolean isPalindrome(String s) {
-
-        String sb = new StringBuilder(s).toString();
-
-        String rev = sb.toString();
-
-        if (s.equals(rev)) {
-            return true;
-        } else {
-            return false;
-        }
+        // For now, assume string has no non-alphanumeric characters passed in.
+        s = s.replaceAll("[^A-Za-z0-9]", "");
+        StringBuilder sb = new StringBuilder(s);
+        sb.reverse();
+        return s.equalsIgnoreCase(sb.toString());
     }
 }
